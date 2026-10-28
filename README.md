@@ -9,6 +9,6 @@ A teaching app on the TEG and ROTEM trace for anaesthetists: the normal trace be
 
 This is a recognition aid. It is not a transfusion algorithm and reference ranges are set locally.
 
-Files: `index.html` (the app), `clot-icon-180.png` (home-screen icon), `reading-the-clot-card.png` (link preview), `SOURCES.md`, `LICENSE`.
+Files: `index.html` (the app), `how-a-teg-draws-its-trace-app-v4.mp4` (the film on the cup-and-pin card), `clot-icon-180.png` (home-screen icon), `reading-the-clot-card.png` (link preview), `SOURCES.md`, `LICENSE`.
 
 Dr Ganesh Sivasankara · MD · FRCA · FCARCSI · Consultant Anaesthetist

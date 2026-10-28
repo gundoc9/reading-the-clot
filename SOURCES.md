@@ -1,6 +1,6 @@
 # Sources
 
-How each paper was checked for this app, with a link to the paper (5 Sep 2026).
+How each paper was checked for this app, with a link to the paper (28 Oct 2026).
 
 - **Oswald 2010** - Oswald E, Stalzer B, Heitz E, Weiss M, Schmugge M, Strasak A, Innerhofer P, Haas T. Thromboelastometry (ROTEM) in children: age-related reference ranges and correlations with standard coagulation tests. Br J Anaesth 2010;105(6):827-835.  
   Read in full. [Open the paper (DOI)](https://doi.org/10.1093/bja/aeq258)
@@ -58,5 +58,11 @@ How each paper was checked for this app, with a link to the paper (5 Sep 2026).
   Read in full. [Open the paper (DOI)](https://doi.org/10.1111/anae.16463)
 - **Wikkelsø 2017** - Wikkelsø A, Wetterslev J, Møller AM, Afshari A. Thromboelastography (TEG) or rotational thromboelastometry (ROTEM) to monitor haemostatic treatment in bleeding patients: a systematic review with meta-analysis and trial sequential analysis. Anaesthesia 2017;72(4):519-531.  
   Read in full. [Open the paper (DOI)](https://doi.org/10.1111/anae.13765)
+- **Milewski 2025** - Milewski AR, Hoyler MM, Haas T, Cushing MM. New device, old algorithm? Bridging generations in perioperative coagulation management. Br J Anaesth 2025;134(2):270-273.  
+  Read in full. [Open the editorial (DOI)](https://doi.org/10.1016/j.bja.2024.12.005)
+- **Riddell 2026** - Riddell NS, Barrett L, Curry N, Mutch NJ, Collis R, Collins PW, Bell SF, de Lloyd L. Coagulopathy in obstetric bleeding: a narrative review and comparison with trauma-induced coagulopathy. Br J Anaesth 2026;137(2):545-562.  
+  Read in full. [Open the paper (DOI)](https://doi.org/10.1016/j.bja.2026.05.006)
+- **Kvisselgaard 2025** - Kvisselgaard AD, Wolthers SA, Wikkelsø A, Holst LB, Drivenes B, Afshari A. Rapid update and revision of: thromboelastography or rotational thromboelastometry guided algorithms in bleeding patients, an updated systematic review with meta-analysis and trial sequential analysis. Acta Anaesthesiol Scand 2025;69:e70127.  
+  Read in full. [Open the paper (DOI, free to read)](https://doi.org/10.1111/aas.70127)
 - **Shah 2026** - Shah A, Polley G, Bera K, et al. Platelet function in patients undergoing major non-cardiac vascular surgery (PLUGS): a prospective cohort study. Anaesthesia 2026;81:1236-1244.  
   Read in full. [Open the paper (DOI)](https://doi.org/10.1111/anae.70234)
