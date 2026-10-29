@@ -60,6 +60,7 @@ h1{font-size:40px;line-height:1.05;font-weight:500;margin:0;letter-spacing:-0.01
 .row .t{font-size:19px;line-height:1.25;font-weight:500}
 .row .r{font-size:14px;color:var(--muted);margin-top:2px;line-height:1.4}
 .foot{margin-top:40px;padding-top:14px;border-top:1px solid var(--rule);font-family:var(--sans);font-size:11.5px;color:var(--muted);line-height:1.5}
+.foot .fl{margin-top:6px}.foot a{color:inherit;text-decoration:underline;text-underline-offset:2px}
 .srcbtn{margin-top:26px;font-family:var(--sans);font-size:13px;color:var(--accent);text-decoration:underline;text-underline-offset:3px}
 /* card */
 .top{display:flex;align-items:center;justify-content:space-between;padding:16px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
@@ -303,6 +304,7 @@ var CLAIMS = /*__CLAIMS__*/{"_about": "Every parameter set the engine draws and 
 var CREDITS = "Dr Ganesh Sivasankara · MD · FRCA · FCARCSI · Consultant Anaesthetist";
 (function(){
   var cards = DATA.cards, byTitle = {}, byId = {};
+  function footEl(){ var d = el('div', 'foot'); d.appendChild(el('div', null, CREDITS)); ["This page keeps nothing about you and sends nothing anywhere.", "Built with Claude (Anthropic). It wrote the code and the first draft of the text; every figure and source was checked by me."].forEach(function(s){ var x = el('div', 'fl', s); d.appendChild(x); }); var l = el('div', 'fl'); l.innerHTML = "© 2026 Ganesh Sivasankara. Shared under <a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY-NC-ND 4.0</a>: you may share it unchanged, with credit, but not for commercial use."; d.appendChild(l); var e = el('div', 'fl'); e.innerHTML = "Spotted an error? <a href=\"https://www.linkedin.com/in/ganeshsivasankara\" target=\"_blank\" rel=\"noopener\">Message me on LinkedIn</a>."; d.appendChild(e); return d; }
   cards.forEach(function(c, i){ c.n = i + 1; byTitle[c.title] = c; byId[c.id] = c; });
   var HUE = { EXTEM: 'var(--extem)', INTEM: 'var(--intem)', FIBTEM: 'var(--fibtem)' };
   var TEG = { CT: 'R', CFT: 'K', MCF: 'MA', ML: 'LY30', alpha: 'α' };
@@ -340,7 +342,7 @@ var CREDITS = "Dr Ganesh Sivasankara · MD · FRCA · FCARCSI · Consultant Anae
       });
       sec.appendChild(ul); h.appendChild(sec);
     });
-    h.appendChild(el('div', 'foot', CREDITS));
+    h.appendChild(footEl());
   }
 
   /* ---------- geometry ---------- */
@@ -662,7 +664,7 @@ var CREDITS = "Dr Ganesh Sivasankara · MD · FRCA · FCARCSI · Consultant Anae
     if (prev) { var pb = el('button', null, '‹ ' + prev.title); pb.addEventListener('click', function(){ openCard(prev.id); }); nav.appendChild(pb); } else nav.appendChild(el('span'));
     if (next) { var nb = el('button', 'next', next.title + ' ›'); nb.addEventListener('click', function(){ openCard(next.id); }); nav.appendChild(nb); }
     right.appendChild(nav);
-    root.appendChild(el('div', 'foot', CREDITS));
+    root.appendChild(footEl());
     window.scrollTo(0, 0);
   }
 
@@ -750,7 +752,7 @@ var CREDITS = "Dr Ganesh Sivasankara · MD · FRCA · FCARCSI · Consultant Anae
       dleft.appendChild(el('p', 'score', first + ' of ' + order.length + ' right on the first tap.'));
       var again = el('button', null, 'Again'); again.addEventListener('click', function(){ renderDrill(null); }); var a2 = el('div', 'acts'); a2.appendChild(again); dleft.appendChild(a2);
     }
-    r.appendChild(box); r.appendChild(el('div', 'foot', CREDITS)); show('drill'); item();
+    r.appendChild(box); r.appendChild(footEl()); show('drill'); item();
   }
 
   /* ---------- plot your own trace: the reader's numbers beside the matched median ---------- */
@@ -851,7 +853,7 @@ var CREDITS = "Dr Ganesh Sivasankara · MD · FRCA · FCARCSI · Consultant Anae
     }
     if (preset) { dev = preset.dev || dev; if (preset.assay) assay = preset.assay; if (preset.pop != null) pi = preset.pop; vals = preset.values || {}; }
     buildFields();
-    r.appendChild(box); r.appendChild(el('div', 'foot', CREDITS)); show('plot'); draw();
+    r.appendChild(box); r.appendChild(footEl()); show('plot'); draw();
   }
 
   /* ---------- the read order: one walkthrough per setting, a test revealed at a time ---------- */
@@ -891,7 +893,7 @@ var CREDITS = "Dr Ganesh Sivasankara · MD · FRCA · FCARCSI · Consultant Anae
       left.appendChild(el('p', 'recap', 'First to last: ' + steps.map(function(s_){ return lc1(s_.options[0]); }).join('; ') + '.'));
       var again = el('button', null, 'Again'); again.addEventListener('click', function(){ renderRead(si, null); }); var a2 = el('div', 'acts'); a2.appendChild(again); left.appendChild(a2);
     }
-    box.appendChild(srcRow); r.appendChild(box); r.appendChild(el('div', 'foot', CREDITS)); show('read'); step();
+    box.appendChild(srcRow); r.appendChild(box); r.appendChild(footEl()); show('read'); step();
   }
 
   function renderSources(){
@@ -900,7 +902,7 @@ var CREDITS = "Dr Ganesh Sivasankara · MD · FRCA · FCARCSI · Consultant Anae
     var s = el('div', 'sources'); s.appendChild(el('h1', null, 'Sources'));
     s.appendChild(el('p', 'grades', 'How each paper was checked for this app, with a link to the paper.'));
     var ol = el('ol'); DATA.sources.forEach(function(x){ var li = el('li'); li.innerHTML = '<div class="k">' + esc(x.name) + '</div><div>' + esc(x.cite) + '</div><div class="n">' + esc(x.status) + '.' + (x.note ? ' ' + esc(x.note) : '') + '</div><a class="open" href="' + esc(x.link) + '" target="_blank" rel="noopener">' + esc(x.linkname) + '</a>'; ol.appendChild(li); }); s.appendChild(ol);
-    r.appendChild(s); r.appendChild(el('div', 'foot', CREDITS)); show('sources');
+    r.appendChild(s); r.appendChild(footEl()); show('sources');
   }
 
   renderHome();
